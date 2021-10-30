@@ -1,30 +1,22 @@
-import math
+'''
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+'''
+
+import numpy as np
 
 def largestPrimeFactor(number):
-    factors = []
-    Largest = None
-    Prime   = True
 
-    #- This part will try to find the factors by dividing the given number to an iteration
-    # and appending the result in a list. This list will be created in decreasing order.
-    for i in range(3, 100000000):
-        if number % i == 0:
-            factors.append(int(number/i))
+    def is_Prime(n):
+        '''Verifies for primes, returns a boolean.'''
 
-    #- Test to find the first prime number, and it will by the order of the biggest prime.
-    for i in factors:
-        Prime = True
-        for j in range(2, int(i)):
-            if i % j == 0:
-                Prime = False
-                break
-    #- Ends the code imediatly returning the biggest prime factor
-        if Prime:
-            return i
-    #- Since the code wont test for '2' and '1', '2' will be the default answer or '1' if odd.
-    if int(str(number)[-1]) % 2 == 0:
-        return 2
-    else:
-        return 1
+        for i in range(3, int( np.floor( np.sqrt(n) ) ) + 1, 2):
+            if n % i == 0: return False
+        return True
+    
+    # if the number is a factor and is Prime, it is the biggest:
+    for i in range(3, number, 2):
+        if number % i == 0 and is_Prime(number / i): return number / i
 
-print(largestPrimeFactor(3));
+print(largestPrimeFactor(600851475143))
