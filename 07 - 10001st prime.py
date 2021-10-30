@@ -16,19 +16,17 @@
 # be getting complicated, for now, only the other skips will be used.
 # 9 is being taken by removing multiples of 3. 7 is dumb.
 
-import math
+import numpy as np
 
 def nPrime(number):
     
-    def isPrime(n):
-        IsPrime = True
+    def is_Prime(n):
+        '''Verifies for primes, returns a boolean.'''
 
-        for i in range(3, math.ceil(n/2), 2):
+        for i in range(3, int( np.floor( np.sqrt(n) ) ) + 1, 2):
             if n % i == 0:
-                IsPrime = False
-                break
-        
-        return IsPrime
+                return False
+        return True
     
     Counter = 1
     Flip = True
@@ -37,9 +35,8 @@ def nPrime(number):
     while Counter < number:
         if Flip:
             
-            if isPrime(i):
+            if is_Prime(i):
                 Counter = Counter + 1
-                #print(i, Counter) #For fun
                 if Counter == 10001:
                     return i
             
@@ -47,9 +44,8 @@ def nPrime(number):
             i = i + 4
         else:
             
-            if isPrime(i):
+            if is_Prime(i):
                 Counter = Counter + 1
-                #print(i, Counter) #For fun
                 if Counter == 10001:
                     return i
 
