@@ -5,33 +5,40 @@
 # Notes:
 # A little better this time using class and functions.
 
-import math
+import numpy as np
 
 class nPrime:
 
     def __init__(self, number):
         self.number = number
-        self.Sum = 4
-        self.fill_List()
+        self.Sum: np.intc = 4
+        self.primes_sum()
 
     def __str__(self):
-        return self.bar_final()
+        return self.results()
 
     def is_Prime(self, n):
-        for i in range(3, int(math.floor(math.sqrt(n))) + 1, 2):
+        '''Verifies for primes, returns a boolean.'''
+
+        for i in range(3, int( np.floor( np.sqrt(n) ) ) + 1, 2):
             if n % i == 0:
                 return False
         return True
               
-    def fill_List(self):
+    def primes_sum(self):
+        '''Sums all the primes. Starts the visual representation.'''
+        
         StartingPart = self.bar_incial()
         Part = StartingPart
         Flip = True
         i = 1
+        
         while i < self.number:
-            if i > Part:
+            
+            if i > Part: # Creates the progress lines
                 Part = Part + StartingPart
                 print('|', end='')
+            
             if Flip:
                 if self.is_Prime(i):
                     self.Sum = self.Sum + i
@@ -42,15 +49,16 @@ class nPrime:
                     self.Sum = self.Sum + i
                 Flip = True
                 i = i + 2
+
         return True
 
     def bar_incial(self):
+        '''Sends the first two rows of the progress visualizer.'''
+
         print('\n\n|------------------------PROGRESS-------------------------|\n|---------------------------------------------------------|\n', end='')
-        return math.ceil(self.number / 60)
+        return np.ceil(self.number / 60)
         
-    def bar_final(self):
+    def results(self):
         return f'\nFinished. Result: {self.Sum}\n\n'
 
-Prime = nPrime(2000000)
-
-print(Prime)
+print( nPrime(2000000))
