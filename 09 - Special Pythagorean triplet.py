@@ -9,23 +9,17 @@
 # which a + b + c = 1000.
 
 # Find the product abc. 
-import math
 
 def specialPythagorean(n):
-    CList = []
-
-    for i in range(2 ,n):
+    
+    for i in range(2, n):
         for j in range(i+1, n):
             for k in range(j+1, n):
                 if i + j + k == 1000 and i ** 2 + j ** 2 == k ** 2:
-                    CList.append(i)
-                    CList.append(j)
-                    CList.append(k)
-                    CList.append('Sum: ')
-                    CList.append(i + j + k)
-                    CList.append('Product: ')
-                    CList.append(i*j*k)
+                    
+                    return f'Numbers: {i} {j} and {k}. Sum: {i+j+k}. Product: {i*j*k}.'
 
-    return CList
+    return f'Not found matches for {n}.'
 
 print(specialPythagorean(1000))
+
