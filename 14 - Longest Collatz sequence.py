@@ -49,13 +49,3 @@ def longest_collatz_sequence_until(n):
 Number = 1000000
 Results = longest_collatz_sequence_until(Number)
 print(f'Result: The biggest Collatz sequence up to the number {Number} is: {Results[0]}. From the number {Results[1]}.')
-
-
-
-
-
-
-
-
-
-
