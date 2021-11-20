@@ -18,6 +18,7 @@ What is the 10001st prime number?
 """
 import numpy as np
 
+
 def is_prime(n):
     
     for i in range(3, int(np.floor(np.sqrt(n))) + 1, 2):
