@@ -9,6 +9,8 @@ What is the smallest positive number that is evenly divisible by all of the numb
     Should be even (Throught iterations of an even number it is resolved)
     Should finish with 20, 40, 60, 80 or 00 (Throught iterations of 20 it is resolved)
 """
+
+
 def is_multiple(n, numbers):
 
     #If the 'n' is not multiple, it's ruled out.
