@@ -11,6 +11,8 @@ a + b + c = 1000.
 
 Find the product abc. 
 """
+
+
 def special_pythagorean(n):
     
     for i in range(2, n):
