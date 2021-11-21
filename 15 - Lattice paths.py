@@ -46,4 +46,3 @@ PascalNotes = pascal_triangle(Side)
 print(f'Result: The number of routes of a grid with the side of {Side} is: {PascalNotes[-1][-1]}')
 
 print(f'Finished in {time.process_time() - Start} seconds')
-
