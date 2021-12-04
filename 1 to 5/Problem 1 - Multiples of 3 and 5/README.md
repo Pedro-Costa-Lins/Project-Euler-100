@@ -1,3 +1,2 @@
-Link to problem:
-  https://projecteuler.net/problem=1
+Link to problem: https://projecteuler.net/problem=1
   
