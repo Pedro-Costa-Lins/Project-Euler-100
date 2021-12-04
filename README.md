@@ -1,6 +1,5 @@
 # Project-Euler-100
 My attempts to solve the first 100 problems. :)
-Once every 25, ther will be an explanation to the thought process of the last.
 
 Link to the site Project Euler: https://projecteuler.net/about
 
