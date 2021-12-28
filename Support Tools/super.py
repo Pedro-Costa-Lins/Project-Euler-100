@@ -1,17 +1,29 @@
 from datetime.datetime import date
-from decorators import time_it, log
+from decorators import time_it, log # custom! :)
 
 class problem:
 
-def __init__(self):
-    solution_date = date(2021, 20, 10)
 
-@log
-@time_it
-def solution():
-    pass
+    @log
+    @time_it
+    def solution():
+
+        """No specific docstring has been made.
+        Calling without given arg will default
+        to the original problem proposition."""
+
+        pass
 
 
-def show_code():
-    with open('plain_code.txt', 'r') as f:
-        print(f.read())
+    def show_code():
+
+        """Fetchs a file called 'plain_code.txt' present
+        in the file of every problem, then displays it."""
+        
+        with open('plain_code.txt', 'r') as f:
+            print(f.read())
+
+
+    def __init__(self):
+        if __name__ == "__main__":
+            print(self.solution())
