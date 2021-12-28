@@ -11,32 +11,16 @@ def time_it(func):
             before = time.time()
             val = func(*args, **kwargs)
             time_taken = time.time() - before
+        
+            # Nice presentation.
+            print(f'Result: {val}\nTime:   {time_taken} seconds.')
+        
         except Exception:
-            return 'There is a problem'
+            print(f'There was an error, invalid input given or ({func.__name__}) is not working.')
+        except KeyboardInterrupt:
+            print('WHY? Did you do something wrong again?')
+        finally:
+            print(f'\nEnd of {func.__name__}.')
         
-        # Nice presentation.
-        print(f'Result: {val}\nTime:   {time_taken} seconds.')
-        
-        
-        print(f'\nEnd of {func.__name__}.')
         
     return wrapper
-
-
-
-from math import sqrt, ceil
-
-
-@time_it
-def balagunga(number):
-    
-    """Verify if it is a prime number."""
-    
-    for i in range(3, ceil(sqrt(number))):
-        if number%i == 0:
-            return False
-    return True
-        
-
-# 218315467
-balagunga()
