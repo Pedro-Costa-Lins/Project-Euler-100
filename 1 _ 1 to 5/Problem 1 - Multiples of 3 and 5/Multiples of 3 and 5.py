@@ -9,7 +9,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
     
 Calling without args will default to the original problem proposition."""
 
-
+    
     def solution(number=1000):
         
         sum = 0
