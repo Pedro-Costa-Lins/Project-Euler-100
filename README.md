@@ -21,4 +21,4 @@ An OOP implementation to take time and help with displaying data.
 - Timing / presentation decorator (Ok)
 - Logging (Ok). But I don't think it will be used.
 - Signature..?
-- Implementation on (0) solutions.
+- Implementation on (1) solutions.
