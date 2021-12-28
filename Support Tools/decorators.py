@@ -1,6 +1,10 @@
+from functools import wraps
+
+
 def time_it(func):
     import time
 
+    @wraps(func)
     def wrapper(*args, **kwargs):
         print(f'Start of {func.__name__}.')
         print(f'Description:\n\t{func.__doc__}', end='\n\n')
@@ -26,7 +30,10 @@ def time_it(func):
 
 def log(func):
     import logging
+
     logging.basicConfig(filename=f'{func.__name__}.log', level=logging.INFO)
+    
+    @wraps(func)
     def wrapper(*args, **kwargs):
         try:
             val = func(*args, **kwargs)

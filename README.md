@@ -3,7 +3,7 @@
 
 Link to the site Project Euler: https://projecteuler.net/about
 
-Ongoing(21%), started October 17 2021.
+Ongoing (21%), started October 17 2021.
 Every program will be on a single file with their required 'data'.
 
 Maybe reformatting and re-do's will happen, but it is intended not to, 
@@ -14,9 +14,11 @@ thought processes and inpirations.
 
 For any recomendations, critics and insults: pedrolins835@gmail.com
 
-## Support Library(Not started):
-A OOP implementation to take time and help with displaying data.
 
-- Timing function
-- Presentation
+## Support Library(Ongoing):
+An OOP implementation to take time and help with displaying data.
+
+- Timing / presentation decorator (Ok)
+- Logging (Ok). But I don't think it will be used.
 - Signature..?
+- Implementation on (0) solutions.
