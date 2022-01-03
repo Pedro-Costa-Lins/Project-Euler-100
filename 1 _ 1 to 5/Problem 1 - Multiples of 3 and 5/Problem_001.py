@@ -1,4 +1,4 @@
-class problem_1(problem):
+class problem_001(problem):
     
     def solution(number=1000):
 
