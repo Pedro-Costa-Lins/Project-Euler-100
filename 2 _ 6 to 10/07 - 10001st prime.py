@@ -17,16 +17,8 @@ What is the 10001st prime number?
     9 is being taken by removing multiples of 3. 7 is dumb.
 """
 import numpy as np
-
-
-def is_prime(n):
-    
-    for i in range(3, int(np.floor(np.sqrt(n))) + 1, 2):
-        if n % i == 0:
-            return False
-    
-    return True
-    
+from support_functions import is_prime
+  
 
 def n_prime(number):
     
@@ -36,7 +28,7 @@ def n_prime(number):
 
     while counter < number:
         if flip:
-            if is_Prime(i):
+            if is_prime(i):
                 counter = counter + 1
                 if counter == 10001:
                     return i
