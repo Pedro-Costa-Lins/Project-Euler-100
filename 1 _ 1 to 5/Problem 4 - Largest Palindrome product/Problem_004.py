@@ -20,7 +20,7 @@ class problem_004(problem):
         return True
 
 
-    def biggest_palindrome_with_n_digits(number=3):
+    def solution(number=3):
         
         """ Largest Palindrome
         A palindromic number reads the same both ways. The largest palindrome made from the 
@@ -28,6 +28,11 @@ class problem_004(problem):
 
         Find the largest palindrome made from the product of two 3-digit numbers.
         """
+
+        # === == === Solution === == ===  #
+
+        # The imput to solution is the lenght of the number witch is going to be used
+        # Exp: 4 = 9999, 2 = 99
 
         # Setting of the range expected.
         nine = 0.99999999999999 

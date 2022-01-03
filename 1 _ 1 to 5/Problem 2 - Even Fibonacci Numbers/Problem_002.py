@@ -13,6 +13,8 @@ class problem_002(problem):
         four million, find the sum of the even-valued terms.
         """
 
+        # === == === Solution === == ===  #
+
         total: int = 2
         fibo = np.array([1 ,2])
         i = 1
