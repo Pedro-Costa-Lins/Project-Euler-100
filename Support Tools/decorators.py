@@ -42,7 +42,7 @@ def log(func):
         except KeyboardInterrupt:
             val = 'User interrupted.'
         finally:
-            logging.info(f'Ran with args: {args}, and kwargs: {kwrags}')
+            logging.info(f'Ran with args: {args}, and kwargs: {kwargs}')
             return val
     
     return wrapper

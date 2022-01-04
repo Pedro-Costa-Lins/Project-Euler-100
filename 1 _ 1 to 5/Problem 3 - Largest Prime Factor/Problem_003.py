@@ -1,7 +1,7 @@
 import numpy as np
 from support_functions import is_prime
 
-class problem_003(problem):
+class Problem_003(Problem):
 
     def solution(number=600851475143):
         

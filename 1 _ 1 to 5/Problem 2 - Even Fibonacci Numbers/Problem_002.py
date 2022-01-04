@@ -1,5 +1,6 @@
 import numpy as np
-class problem_002(problem):
+
+class Problem_002(Problem):
 
     def solution(number=4000000):
 
