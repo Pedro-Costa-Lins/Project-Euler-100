@@ -1,3 +1,6 @@
+from super import Problem
+
+
 class Problem_001(Problem):
 
     def solution(number=1000):
