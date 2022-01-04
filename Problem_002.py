@@ -1,4 +1,6 @@
 import numpy as np
+from super import Problem
+
 
 class Problem_002(Problem):
 
@@ -22,16 +24,16 @@ class Problem_002(Problem):
         notFinished = True
 
         while notFinished:
-            #Fibonnaci sequence
+            # Fibonnaci sequence
             fibo = np.append(fibo, fibo[i] + fibo[i-1])
             
-            #Now 'fibo[i]' is the new generated member of the list.
+            # Now 'fibo[i]' is the new generated member of the list.
             i = i + 1
 
-            #If 'i' is even, add 'Fibo[i]' to 'total'.
+            # If 'i' is even, add 'Fibo[i]' to 'total'.
             if fibo[i] % 2 == 0: total = total + fibo[i]
 
-            #In order to the while to work, 'j' is now the last number on the sequence.
+            # In order to the while to work, 'j' is now the last number on the sequence.
             if fibo[i] >= number:
                 notFinished = False
         

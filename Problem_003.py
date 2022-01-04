@@ -1,5 +1,7 @@
 import numpy as np
 from support_functions import is_prime
+from super import Problem
+
 
 class Problem_003(Problem):
 

@@ -1,10 +1,11 @@
 import math
+from super import Problem
 
 
-class problem_004(problem):
+class Problem_004(Problem):
 
+    def is_palindrome(number):
 
-    def isPalindrome(number):
         """Compares the digits until finding a difference, if it does,
         then it's not palindrome.
         """
@@ -19,8 +20,7 @@ class problem_004(problem):
 
         return True
 
-
-    def solution(number=3):
+    def solution(self, number=3):
         
         """ Largest Palindrome
         A palindromic number reads the same both ways. The largest palindrome made from the 
@@ -31,18 +31,18 @@ class problem_004(problem):
 
         # === == === Solution === == ===  #
 
-        # The imput to solution is the lenght of the number witch is going to be used
+        # The input to solution is the length of the number witch is going to be used
         # Exp: 4 = 9999, 2 = 99
 
         # Setting of the range expected.
         nine = 0.99999999999999 
-        ProductRange = int(math.ceil(nine * 10 ** number))
-        
-        Biggest = 1
+        product_range = int(math.ceil(nine * 10 ** number))
 
-        for i in range(int(ProductRange / 10), ProductRange):
-            for j in range(i, ProductRange):
-                if isPalindrome(i*j) and i*j > Biggest:
-                    Biggest = i*j
+        biggest = 1
 
-        return Biggest
+        for i in range(int(product_range / 10), product_range):
+            for j in range(i, product_range):
+                if self.is_palindrome(i * j) and i * j > biggest:
+                    biggest = i*j
+
+        return biggest
