@@ -1,4 +1,3 @@
-import Problem001
+from super import Problem
 
-
-Problem001.solution()
+print(Problem.solution.__doc__)
