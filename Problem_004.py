@@ -2,7 +2,7 @@ import math
 from super import Problem
 
 
-class Problem_004(Problem):
+class Problem004(Problem):
 
     def is_palindrome(number):
 

@@ -1,6 +1,7 @@
 from super import Problem
 
-class problem_005(Problem):
+
+class problem005(Problem):
 
     def is_multiple(n, numbers):
 
@@ -17,7 +18,6 @@ class problem_005(Problem):
 
         What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
         """
-
 
         # Thoughts:
         #   Should be even (Throughout iterations of an even number it is resolved)

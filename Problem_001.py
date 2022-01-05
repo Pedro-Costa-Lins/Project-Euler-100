@@ -1,7 +1,7 @@
 from super import Problem
 
 
-class Problem_001(Problem):
+class Problem001(Problem):
 
     def solution(number=1000):
 

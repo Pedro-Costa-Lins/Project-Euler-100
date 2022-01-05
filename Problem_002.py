@@ -2,7 +2,7 @@ import numpy as np
 from super import Problem
 
 
-class Problem_002(Problem):
+class Problem002(Problem):
 
     def solution(number=4000000):
 

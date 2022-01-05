@@ -1,12 +1,11 @@
-from datetime import date
-from decorators import time_it, log # custom! :)
+from decorators import time_it, log  # custom! :)
 
 
 class Problem:
 
     @log
     @time_it
-    def solution(self):
+    def solution(self, number):
 
         """No specific docstring has been made.
         Calling without given arg will default
