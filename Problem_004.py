@@ -4,7 +4,7 @@ from super import Problem
 
 class Problem004(Problem):
 
-    def is_palindrome(number):
+    def is_palindrome(self, number):
 
         """Compares the digits until finding a difference, if it does,
         then it's not palindrome.

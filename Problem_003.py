@@ -4,7 +4,7 @@ from super import Problem
 
 class Problem003(Problem):
 
-    def solution(number=600851475143):
+    def solution(self, number=600851475143):
         
         """ Largest Prime Factor
         The prime factors of 13195 are 5, 7, 13 and 29.

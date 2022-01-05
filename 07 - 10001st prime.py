@@ -4,7 +4,7 @@ from support_functions import is_prime
 
 class Problem007(Problem):
 
-    def solution(number=10001):
+    def solution(self, number=10001):
 
         """ 10001st prime
         By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.

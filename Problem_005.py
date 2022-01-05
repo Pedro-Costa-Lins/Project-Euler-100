@@ -1,7 +1,7 @@
 from super import Problem
 
 
-class problem005(Problem):
+class Problem005(Problem):
 
     def is_multiple(n, numbers):
 
