@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Notebok/.idea/Notebok.iml" filepath="$PROJECT_DIR$/../Notebok/.idea/Notebok.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Project-Euler-100.iml" filepath="$PROJECT_DIR$/.idea/Project-Euler-100.iml" />
     </modules>
   </component>

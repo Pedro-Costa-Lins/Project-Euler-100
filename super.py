@@ -5,7 +5,7 @@ class Problem:
 
     @log
     @time_it
-    def solution(self, number):
+    def solution(self, number=None):
 
         """No specific docstring has been made.
         Calling without given arg will default
