@@ -6,23 +6,17 @@ def time_it(func):
 
     @wraps(func)
     def wrapper():
-        print(f'Start of {func.__name__}.')
+        print(f'\nStart of {func.__name__}.')
         print(f'Description:\n\t{func.__doc__}', end='\n\n')
         
         # Will only time the function itself, hopefully.
         before = time.time()
-        try:
-            val = func()
-
-        except KeyboardInterrupt:
-            val = 'User interrupted.'
-
-        finally:
-            time_taken = time.time() - before
+        val = func()
+        time_taken = time.time() - before
             
-            # Nice presentation.
-            print(f'Result: {val}\nTime:   {time_taken} seconds.')
-            print(f'\nEnd of ({func.__name__}) function.')
+        # Nice presentation.
+        print(f'Result: {val}\nTime:   {time_taken} seconds.')
+        print(f'\nEnd of ({func.__name__}) function.')
                 
     return wrapper
 
@@ -34,15 +28,8 @@ def log(func):
     
     @wraps(func)
     def wrapper():
-        try:
-            val = func()
-
-        except KeyboardInterrupt:
-            val = 'User interrupted.'
-
-        finally:
-            logging.info(f'{func.__name__} was executed.')
+        val = func()
+        logging.info(f'{func.__name__} was executed.')
 
         return val
-    
     return wrapper

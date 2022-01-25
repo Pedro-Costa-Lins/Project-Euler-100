@@ -1,11 +1,14 @@
-from super import Problem
+from decorators import log, time_it
 
 
-class Test(Problem):
+class Test:
 
-    def solution(number=1000):
+    @log
+    @time_it
+    def solution(number=1015):
+        """ Attempt to fix this dumb code."""
 
-        print(number ** 2)
+        return number ** 50
 
-        return True
 
+Test.solution()
