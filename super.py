@@ -3,9 +3,7 @@ from decorators import time_it, log  # custom! :)
 
 class Problem:
 
-    @log
-    @time_it
-    def solution(self, number=None):
+    def solution(number=None):
 
         """No specific docstring has been made.
         Calling without given arg will default
@@ -13,6 +11,14 @@ class Problem:
 
         pass
 
+    @log
+    @time_it
+    def run(self):
+        print(self.solution())
+
     def __init__(self):
         if __name__ == "__main__":
-            print(self.solution())
+            self.run()
+
+
+
