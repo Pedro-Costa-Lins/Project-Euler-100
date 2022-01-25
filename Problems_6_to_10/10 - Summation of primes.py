@@ -1,73 +1,57 @@
-""" Summation of primes
-The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
-
-Find the sum of all the primes below two million.
-"""
-import numpy as np
+from super import Problem
 
 
-class n_prime:
+def is_prime(number):
+    from math import ceil, sqrt
 
-    def __init__(self, number):
-        self.number = number
-        self.Sum: np.intc = 4
-        self.primes_sum()
+    for i in range(3, ceil(sqrt(number))):
+        if not (number % i):
+            return False
 
-        
-    def __str__(self):
-        return self.results()
+    return True
 
-    
-    def is_prime(self, n):
-        '''Verifies for primes, returns a boolean.'''
 
-        for i in range(3, int(np.floor(np.sqrt(n))) + 1, 2):
-            if n % i == 0:
-                return False
-        return True
-         
-        
-    def primes_sum(self):
-        """Sums all the primes. Starts the visual representation."""
-        
-        startingPart = self.bar_incial()
-        part = startingPart
+def bar_initial(size):
+    """Sends the first two rows of the progress visualizer."""
+
+    print('\n\n|------------------------PROGRESS-------------------------|\n\
+               |---------------------------------------------------------|\n', end='')
+
+    return size // 60
+
+
+class Problem010(Problem):
+
+    def solution(self, number=2_000_000):
+        """ Summation of primes
+        The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+        Find the sum of all the primes below two million.
+        """
+
+        # === == === Solution === == ===  #
+
+        part = starting_part = bar_initial(number)
         flip = True
         i = 1
+        total = 4
         
-        while i < self.number:
+        while i < number:
             
-            # Creates progess lines
+            # Creates progress lines
             if i > part:
-                Part = Part + StartingPart
+                part = part + starting_part
                 print('|', end='')
             
             if flip:
-                if self.is_prime(i):
-                    self.Sum = self.Sum + i
+                if is_prime(i):
+                    total = total + i
                 flip = False
                 i = i + 4
             else:
-                if self.is_prime(i):
-                    self.Sum = self.Sum + i
+                if is_prime(i):
+                    total = total + i
                 flip = True
                 i = i + 2
 
-        return True
-
-    
-    def bar_incial(self):
-        """Sends the first two rows of the progress visualizer."""
-
-        print('\n\n|------------------------PROGRESS-------------------------|\n\
-                   |---------------------------------------------------------|\n', end='')
-        
-        return np.ceil(self.number / 60)
-    
-    
-    def results(self):
-        return f'\nFinished. Result: {self.Sum}\n\n'
-
-
-Number = 2000000
-print(n_prime(Number))
+        return total

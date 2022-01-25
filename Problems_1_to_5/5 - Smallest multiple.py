@@ -14,14 +14,17 @@ class Problem005(Problem):
     def solution(self, numbers=[11, 20]):
 
         """ Smallest Multiple
-        2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+        2520 is the smallest number that can be divided by each of the numbers
+        from 1 to 10 without any remainder.
 
-        What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+        What is the smallest positive number that is evenly divisible by all
+        of the numbers from 1 to 20?
         """
 
         # Thoughts:
         #   Should be even (Throughout iterations of an even number it is resolved)
-        #   Should finish with 20, 40, 60, 80 or 00 (Throughout iterations of 20 it is resolved)
+        #   Should finish with 20, 40, 60, 80 or 00
+        #   (Throughout iterations of 20 it is resolved)
         #   20, 19, 18, 17, 16, 15, 14, 13, 12, 11 are the only numbers to worry about.
 
         # === == === Solution === == ===  #
