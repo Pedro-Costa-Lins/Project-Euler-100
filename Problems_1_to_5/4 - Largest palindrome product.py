@@ -2,12 +2,12 @@ import math
 from super import Problem
 
 
+def is_palindrome(number):
+    return str(number) == str(number)[::-1]
+
+
 class Problem004(Problem):
 
-    def is_palindrome(self, number):
-        return str(number) == str(number)[::-1]
-
-    
     def solution(self, number=3):
         
         """ Largest Palindrome
@@ -30,7 +30,7 @@ class Problem004(Problem):
 
         for i in range(int(product_range / 10), product_range):
             for j in range(i, product_range):
-                if self.is_palindrome(i * j) and i * j > biggest:
+                if is_palindrome(i * j) and i * j > biggest:
                     biggest = i*j
 
         return biggest

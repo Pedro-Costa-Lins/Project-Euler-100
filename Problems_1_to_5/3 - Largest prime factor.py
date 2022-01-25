@@ -1,8 +1,16 @@
-from support_functions import is_prime
 from super import Problem
 
 
 class Problem003(Problem):
+
+    def is_prime(self, number):
+        from math import ceil, sqrt
+
+        for i in range(3, ceil(sqrt(number))):
+            if not (number % i):
+                return False
+
+        return True
 
     def solution(self, number=600851475143):
         
