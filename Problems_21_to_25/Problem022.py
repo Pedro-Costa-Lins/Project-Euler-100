@@ -26,10 +26,10 @@ class Problem022(Problem):
 
         # in order to sort, first find and separate.
         pattern = r'([a-zA-Z]+)'
-        with open('names.txt', 'r') as names:
-            name_list = re.findall(pattern, names.read())
+        with open('names.txt', 'r') as file:
+            name_list = re.findall(pattern, file.read())
 
-        print(name_list)
+        names = list(name_list)
 
-        return
+        return 87
 
