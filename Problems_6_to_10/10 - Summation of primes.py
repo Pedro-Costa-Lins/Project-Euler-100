@@ -11,15 +11,6 @@ def is_prime(number):
     return True
 
 
-def bar_initial(size):
-    """Sends the first two rows of the progress visualizer."""
-
-    print('\n\n|------------------------PROGRESS-------------------------|\n\
-               |---------------------------------------------------------|\n', end='')
-
-    return size // 60
-
-
 class Problem010(Problem):
 
     def solution(self, number=2_000_000):
@@ -31,18 +22,12 @@ class Problem010(Problem):
 
         # === == === Solution === == ===  #
 
-        part = starting_part = bar_initial(number)
         flip = True
         i = 1
         total = 4
         
         while i < number:
-            
-            # Creates progress lines
-            if i > part:
-                part = part + starting_part
-                print('|', end='')
-            
+
             if flip:
                 if is_prime(i):
                     total = total + i
