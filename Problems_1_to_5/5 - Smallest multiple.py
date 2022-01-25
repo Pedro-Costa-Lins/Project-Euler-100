@@ -1,7 +1,7 @@
-from super import Problem
+from decorators import log, time_it
 
 
-class Problem005(Problem):
+class Problem:
 
     def is_multiple(n, numbers):
 
@@ -11,6 +11,8 @@ class Problem005(Problem):
                 return False
         return True
 
+    @log
+    @time_it
     def solution(self, numbers=[11, 20]):
 
         """ Smallest Multiple
@@ -39,4 +41,6 @@ class Problem005(Problem):
             n = n + iteration
         
         return n
-    
+
+
+Problem.solution()

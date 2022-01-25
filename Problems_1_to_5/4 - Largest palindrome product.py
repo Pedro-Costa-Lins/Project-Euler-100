@@ -1,15 +1,15 @@
 import math
-from super import Problem
+from decorators import log, time_it
 
 
 def is_palindrome(number):
     return str(number) == str(number)[::-1]
 
 
-class Problem004(Problem):
+class Problem:
 
-    def solution(self, number=3):
-        
+    def solution(number=3):
+
         """ Largest Palindrome
         A palindromic number reads the same both ways. The largest palindrome made from the 
         product of two 2-digit numbers is 9009 = 91 × 99.
@@ -34,3 +34,6 @@ class Problem004(Problem):
                     biggest = i*j
 
         return biggest
+
+
+Problem.solution()

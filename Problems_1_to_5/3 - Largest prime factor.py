@@ -1,4 +1,4 @@
-from super import Problem
+from decorators import log, time_it
 
 
 def is_prime(number):
@@ -11,9 +11,11 @@ def is_prime(number):
     return True
 
 
-class Problem003(Problem):
+class Problem:
 
-    def solution(self, number=600851475143):
+    @log
+    @time_it
+    def solution(number=600851475143):
         
         """ Largest Prime Factor
         The prime factors of 13195 are 5, 7, 13 and 29.
@@ -27,3 +29,6 @@ class Problem003(Problem):
         for i in range(3, number, 2):
             if not(number % i) and is_prime(number / i):
                 return number / i
+
+
+Problem.solution()

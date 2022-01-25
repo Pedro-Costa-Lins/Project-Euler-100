@@ -1,9 +1,11 @@
-from super import Problem
+from decorators import log, time_it
 
 
-class Problem001(Problem):
+class Problem:
 
-    def solution(self, number=1000):
+    @log
+    @time_it
+    def solution(number=1000):
 
         """Multiples of 3 and 5.
         If we list all the natural numbers below 10 that are
@@ -22,3 +24,6 @@ class Problem001(Problem):
                 final_sum += i
 
         return final_sum
+
+
+Problem.solution()
