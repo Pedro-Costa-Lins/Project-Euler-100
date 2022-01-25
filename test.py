@@ -9,4 +9,3 @@ class Test(Problem):
 
         return True
 
-# print(Test.solution())

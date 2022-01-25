@@ -4,12 +4,7 @@ from decorators import time_it, log  # custom! :)
 class Problem:
 
     def solution(number=None):
-
-        """No specific docstring has been made.
-        Calling without given arg will default
-        to the original problem proposition."""
-
-        pass
+        print('super here')
 
     @log
     @time_it
@@ -17,8 +12,7 @@ class Problem:
         print(self.solution())
 
     def __init__(self):
-        if __name__ == "__main__":
-            self.run()
+        self.run(self)
 
 
 

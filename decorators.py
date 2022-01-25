@@ -5,14 +5,14 @@ def time_it(func):
     import time
 
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper():
         print(f'Start of {func.__name__}.')
         print(f'Description:\n\t{func.__doc__}', end='\n\n')
         
         # Will only time the function itself, hopefully.
         before = time.time()
         try:
-            val = func(*args, **kwargs)
+            val = func()
 
         except KeyboardInterrupt:
             val = 'User interrupted.'
@@ -33,15 +33,15 @@ def log(func):
     logging.basicConfig(filename=f'{func.__name__}.log', level=logging.INFO)
     
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper():
         try:
-            val = func(*args, **kwargs)
+            val = func()
 
         except KeyboardInterrupt:
             val = 'User interrupted.'
 
         finally:
-            logging.info(f'Ran with args: {args}, and kwargs: {kwargs}')
+            logging.info(f'{func.__name__} was executed.')
 
         return val
     
