@@ -5,21 +5,9 @@ from super import Problem
 class Problem004(Problem):
 
     def is_palindrome(self, number):
+        return str(number) == str(number)[::-1]
 
-        """Compares the digits until finding a difference, if it does,
-        then it's not palindrome.
-        """
-
-        digits = str(number)
-
-        # Compares the first digit to the last, the second to the before
-        # the last an so on.
-        for i in range(1, math.floor(len(digits) /2) +1):
-            if digits[-i] != digits[i-1]:
-                return False
-
-        return True
-
+    
     def solution(self, number=3):
         
         """ Largest Palindrome
