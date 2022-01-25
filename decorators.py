@@ -13,11 +13,10 @@ def time_it(func):
         before = time.time()
         try:
             val = func(*args, **kwargs)
-            
-        except Exception:
-            val = f'Error in ({func.__name__}) or invalid input.'
+
         except KeyboardInterrupt:
             val = 'User interrupted.'
+
         finally:
             time_taken = time.time() - before
             
@@ -37,12 +36,13 @@ def log(func):
     def wrapper(*args, **kwargs):
         try:
             val = func(*args, **kwargs)
-        except Exception:
-            val = f'Error in {func.__name__} or invalid input.'
+
         except KeyboardInterrupt:
             val = 'User interrupted.'
+
         finally:
             logging.info(f'Ran with args: {args}, and kwargs: {kwargs}')
-            return val
+
+        return val
     
     return wrapper
