@@ -17,7 +17,7 @@ class Problem001(Problem):
         # === == === Solution === == ===  #
 
         final_sum = 0
-        for i in range(number):
+        for i in range(3, number):
             if not(i % 3) or not(i % 5):
                 final_sum += i
 

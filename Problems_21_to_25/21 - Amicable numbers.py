@@ -39,7 +39,7 @@ class Problem021(Problem):
 
         for number in range(1, 10_000):
             value = has_amicable(number=number)
-            if value != False and number not in list_of_amicable_numbers:
+            if value is not False and number not in list_of_amicable_numbers:
                 list_of_amicable_numbers.append(value)
                 list_of_amicable_numbers.append(number)
 
