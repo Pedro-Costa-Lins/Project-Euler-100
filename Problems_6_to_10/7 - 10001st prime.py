@@ -1,4 +1,4 @@
-from super import Problem
+from decorators import time_it
 
 
 def is_prime(number):
@@ -11,8 +11,9 @@ def is_prime(number):
     return True
 
 
-class Problem007(Problem):
+class Problem:
 
+    @time_it
     def solution(self, number=10001):
 
         """ 10001st prime
@@ -49,3 +50,6 @@ class Problem007(Problem):
                 i = i + 2
 
         return i
+
+
+Problem.solution()

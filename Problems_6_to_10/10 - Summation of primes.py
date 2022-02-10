@@ -1,4 +1,4 @@
-from super import Problem
+from decorators import log, time_it
 
 
 def is_prime(number):
@@ -11,8 +11,10 @@ def is_prime(number):
     return True
 
 
-class Problem010(Problem):
+class Problem:
 
+    @log
+    @time_it
     def solution(self, number=2_000_000):
         """ Summation of primes
         The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
@@ -50,3 +52,6 @@ class Problem010(Problem):
                 i += 2
 
         return total
+
+
+Problem.solution()

@@ -1,6 +1,4 @@
-""" Large Sum
-Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
-"""
+from decorators import time_it
 import numpy as np
 
 # Should have put it on another file, but "Me wants single file/problem".
@@ -105,6 +103,17 @@ NumberList = np.array([37107287533902102798797998220837590246510135740250,
                        20849603980134001723930671666823555245252804609722,
                        53503534226472524250874054075591789781264330331690])
 
-Total = np.sum(NumberList)
 
-print(f'Result: {Total}\nThe first ten digits: {str(Total)[:10]}')
+class Problem:
+
+    @time_it
+    def solution():
+
+        """ Large Sum
+        Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
+        """
+
+        return np.sum(NumberList)
+
+
+Problem.solution()

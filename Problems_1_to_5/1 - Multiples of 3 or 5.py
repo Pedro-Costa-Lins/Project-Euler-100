@@ -1,9 +1,8 @@
-from decorators import log, time_it
+from decorators import time_it
 
 
 class Problem:
 
-    @log
     @time_it
     def solution(number=1000):
 

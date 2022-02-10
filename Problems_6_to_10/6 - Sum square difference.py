@@ -1,9 +1,10 @@
-from super import Problem
+from decorators import time_it
 
 
-class Problem006(Problem):
+class Problem:
 
-    def solution(self, number=100):
+    @time_it
+    def solution(number=100):
 
         """ Sem Square Difference
         The sum of the squares of the first ten natural numbers is:
@@ -29,9 +30,12 @@ class Problem006(Problem):
         sqr_sum = 0
 
         for i in range(1, number + 1):
-            sum_sqr = sum_sqr + (i**2)
-            sqr_sum = sqr_sum + i
+            sum_sqr += (i**2)
+            sqr_sum += + i
 
-        sqr_sum = sqr_sum ** 2
+        sqr_sum **= 2
 
         return sqr_sum - sum_sqr
+
+
+Problem.solution()

@@ -1,4 +1,4 @@
-from super import Problem
+from decorators import time_it
 
 
 def sum_of_divisors(number):
@@ -16,8 +16,9 @@ def has_amicable(number):
     return False
 
 
-class Problem021(Problem):
+class Problem:
 
+    @time_it
     def solution(self, number=10_000):
 
         """Amicable numbers.
@@ -44,3 +45,6 @@ class Problem021(Problem):
                 list_of_amicable_numbers.append(number)
 
         return sum(list_of_amicable_numbers)
+
+
+Problem.solution()

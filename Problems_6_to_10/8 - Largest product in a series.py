@@ -1,4 +1,4 @@
-from super import Problem
+from decorators import time_it
 
 Number = '7316717653133062491922511967442657474235534919493496983520312774\
           5063262395783180169848018694788518438586156078911294949545950173\
@@ -18,8 +18,9 @@ Number = '7316717653133062491922511967442657474235534919493496983520312774\
           1882670428252483600823257530420752963450'
 
 
-class Problem008(Problem):
+class Problem:
 
+    @time_it
     def solution(self, adjacent=13, number=Number):
         """ Largest product in a series
         The four adjacent digits in the 1000-digit number that have the
@@ -53,3 +54,5 @@ class Problem008(Problem):
 
         return biggest_product
 
+
+Problem.solution()

@@ -1,10 +1,11 @@
 import re
-from super import Problem
+from decorators import time_it
 
 
-class Problem022(Problem):
+class Problem:
 
-    def solution(self):
+    @time_it
+    def solution():
 
         """
         Using names.txt (right click and 'Save Link/Target As...'),
@@ -33,3 +34,5 @@ class Problem022(Problem):
 
         return 87
 
+
+Problem.solution()

@@ -1,69 +1,4 @@
-""" Largest Product
-In the 20×20 grid below, four numbers along a diagonal line have been marked in red.
-
-The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
-
-What is the greatest product of four adjacent numbers in the same direction
-(up, down, left, right, or diagonally) in the 20×20 grid?
-"""
-
-
-def array_nator_400(grid):
-    numbers = grid.split()
-    
-    # Takes out the first 20 items and put them into a row, then repeat.
-    Array = [[numbers.pop(0) for j in range(20)] for i in range(20)]
-
-    return Array
-
-
-def largest_product(Array):
-    Biggest_Product = 0
-
-    
-    def horizontal(Array, Biggest_Product):
-        for i in range(20):
-            for j in range(len(Array[i])-3):
-                Test = int(Array[i][j]) * int(Array[i][j+1]) * int(Array[i][j+2]) * int(Array[i][j+3])
-                
-                if Test > Biggest_Product:
-                    Biggest_Product = Test
-        return Biggest_Product
-
-    
-    def vertical(Array, Biggest_Product):
-        for i in range(17):
-            for j in range(len(Array[i])):
-                Test = int(Array[i][j]) * int(Array[i+1][j]) * int(Array[i+2][j]) * int(Array[i+3][j])
-                
-                if Test > Biggest_Product:
-                    Biggest_Product = Test
-        return Biggest_Product
-
-    
-    def diagonal(Array, Biggest_Product):
-        for i in range(17):
-            for j in range(len(Array[i])-3):
-                Test = int(Array[i][j]) * int(Array[i+1][j+1]) * int(Array[i+2][j+2]) * int(Array[i+3][j+3])
-                
-                if Test > Biggest_Product:
-                    Biggest_Product = Test
-        
-        for i in range(17):
-            for j in range(3, len(Array[i])):
-                Test = int(Array[i][j]) * int(Array[i+1][j-1]) * int(Array[i+2][j-2]) * int(Array[i+3][j-3])
-                
-                if Test > Biggest_Product:
-                    Biggest_Product = Test
-        return Biggest_Product
-
-    
-    Biggest_Product = horizontal(Array, Biggest_Product)
-    Biggest_Product = vertical(Array, Biggest_Product)
-    Biggest_Product = diagonal(Array, Biggest_Product)
-
-    return Biggest_Product
-
+from decorators import time_it
 
 GridInText = '08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\
               49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00\
@@ -86,4 +21,69 @@ GridInText = '08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08\
               20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54\
               01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48'
 
-print(largest_product(array_nator_400(GridInText)))
+
+def arraynator(grid):
+    numbers = grid.split()
+    
+    # Takes out the first 20 items and put them into a row, then repeat.
+    array = [[numbers.pop(0) for j in range(20)] for i in range(20)]
+
+    return array
+
+
+class Problem:
+
+    @time_it
+    def solution():
+
+        """
+        What is the greatest product of four adjacent numbers in the same direction
+        (up, down, left, right, or diagonally)
+        in the 20×20 grid?
+        """
+
+        array = arraynator(GridInText)
+        biggest_product = 0
+
+        def horizontal(array, biggest_product):
+            for i in range(20):
+                for j in range(len(array[i]) - 3):
+                    test = int(array[i][j]) * int(array[i][j + 1]) * int(array[i][j + 2]) * int(array[i][j + 3])
+
+                    if test > biggest_product:
+                        biggest_product = test
+            return biggest_product
+
+        def vertical(array, biggest_product):
+            for i in range(17):
+                for j in range(len(array[i])):
+                    test = int(array[i][j]) * int(array[i + 1][j]) * int(array[i + 2][j]) * int(array[i + 3][j])
+
+                    if test > biggest_product:
+                        biggest_product = test
+            return biggest_product
+
+        def diagonal(array, biggest_product):
+            for i in range(17):
+                for j in range(len(array[i]) - 3):
+                    test = int(array[i][j]) * int(array[i + 1][j + 1]) * int(array[i + 2][j + 2]) * int(array[i + 3][j + 3])
+
+                    if test > biggest_product:
+                        biggest_product = test
+
+            for i in range(17):
+                for j in range(3, len(array[i])):
+                    test = int(array[i][j]) * int(array[i + 1][j - 1]) * int(array[i + 2][j - 2]) * int(array[i + 3][j - 3])
+
+                    if test > biggest_product:
+                        biggest_product = test
+            return biggest_product
+
+        biggest_product = horizontal(array, biggest_product)
+        biggest_product = vertical(array, biggest_product)
+        biggest_product = diagonal(array, biggest_product)
+
+        return biggest_product
+
+
+Problem.solution()

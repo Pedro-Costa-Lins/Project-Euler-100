@@ -1,4 +1,4 @@
-from decorators import log, time_it
+from decorators import time_it
 
 
 def is_prime(number):
@@ -13,7 +13,6 @@ def is_prime(number):
 
 class Problem:
 
-    @log
     @time_it
     def solution(number=600851475143):
         

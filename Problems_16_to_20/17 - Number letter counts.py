@@ -1,18 +1,4 @@
-""" Number letter counts
-If the numbers 1 _ Problems_1_to_5 are written out in words: one, two, three, four, five,
-then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
-
-If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used?
-
-
-NOTE: Do not count spaces or hyphens.
-
-For example, 342 (three hundred and forty-two) contains 23 letters and
-115 (one hundred and fifteen) contains 20 letters.
-
-The use of "and" when writing out numbers is in compliance with British usage.
-"""
-import numpy as np
+from decorators import log, time_it
 
 
 def last_digit_name(last_digit):
@@ -122,13 +108,35 @@ def number_name_giver(number):
     return give_back
 
 
-def iterator_and_accounting_until(number):
-    final_list = []
-    for i in range(1, number+1):
-        final_list = final_list + number_name_giver(i)
+class Problem:
 
-    return len(''.join(final_list))
+    @log
+    @time_it
+    def solution(number=1000):
+
+        """ Number letter counts
+        If the numbers 1 _ Problems_1_to_5 are written out in words: one, two, three, four, five,
+        then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
+
+        If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words,
+        how many letters would be used?
 
 
-Number = 1000
-print(iterator_and_accounting_until(number=Number))
+        NOTE: Do not count spaces or hyphens.
+
+        For example, 342 (three hundred and forty-two) contains 23 letters and
+        115 (one hundred and fifteen) contains 20 letters.
+
+        The use of "and" when writing out numbers is in compliance with British usage.
+        """
+
+        # === == === Solution === == ===  #
+
+        final_list = []
+        for i in range(1, number+1):
+            final_list = final_list + number_name_giver(i)
+
+        return len(''.join(final_list))
+
+
+Problem.solution()

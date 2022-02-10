@@ -1,9 +1,10 @@
-from super import Problem
+from decorators import time_it
 
 
-class Problem009(Problem):
+class Problem:
 
-    def solution(self, number=1000):
+    @time_it
+    def solution(number=1000):
 
         """ Special Pythagorean
         A Pythagorean triplet is a set of three natural numbers, a < b < c, for which:
@@ -30,3 +31,6 @@ class Problem009(Problem):
                                f' Product: {i*j*k}.'
 
         return f'Not found matches for {number}.'
+
+
+Problem.solution()

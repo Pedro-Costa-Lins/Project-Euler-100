@@ -1,5 +1,5 @@
 import math
-from decorators import log, time_it
+from decorators import time_it
 
 
 def is_palindrome(number):
@@ -8,6 +8,7 @@ def is_palindrome(number):
 
 class Problem:
 
+    @time_it
     def solution(number=3):
 
         """ Largest Palindrome

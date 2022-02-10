@@ -1,19 +1,18 @@
-from decorators import log, time_it
+from decorators import time_it
+
+
+def is_multiple(n, numbers):
+    # If the 'n' is not multiple, it's ruled out.
+    for j in range(numbers[0], numbers[1]):
+        if n % j != 0:
+            return False
+    return True
 
 
 class Problem:
 
-    def is_multiple(n, numbers):
-
-        # If the 'n' is not multiple, it's ruled out.
-        for j in range(numbers[0], numbers[1]): 
-            if n % j != 0:
-                return False
-        return True
-
-    @log
     @time_it
-    def solution(self, numbers=[11, 20]):
+    def solution(numbers=[11, 20]):
 
         """ Smallest Multiple
         2520 is the smallest number that can be divided by each of the numbers
@@ -36,9 +35,9 @@ class Problem:
         n = 20
         
         while not_found:
-            if self.is_multiple(n, numbers):
+            if is_multiple(n, numbers):
                 not_found = False
-            n = n + iteration
+            n += iteration
         
         return n
 
