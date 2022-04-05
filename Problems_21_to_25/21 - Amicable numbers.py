@@ -19,7 +19,7 @@ def has_amicable(number):
 class Problem:
 
     @time_it
-    def solution(self, number=10_000):
+    def solution(number=10_000):
 
         """Amicable numbers.
         Let d(n) be defined as the sum of proper divisors of n
