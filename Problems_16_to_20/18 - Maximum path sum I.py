@@ -1,10 +1,9 @@
-from decorators import log, time_it
+from decorators import time_it
 import urllib
 
 
 class Problem:
 
-    @log
     @time_it
     def solution():
 
@@ -35,11 +34,13 @@ class Problem:
         for line in reversed(range(len(triangle)-1)):
             for item in range(len(triangle[line])):
                 if (triangle[line][item] + triangle[line+1][item]) >= (triangle[line][item] + triangle[line+1][item+1]):
-                    triangle[line][item] = triangle[line][item] + triangle[line+1][item]
+                    triangle[line][item] += triangle[line+1][item]
                 else:
-                    triangle[line][item] = triangle[line][item] + triangle[line+1][item+1]
+                    triangle[line][item] += triangle[line+1][item+1]
 
         return triangle[0][0]
 
 
-Problem.solution()
+# Problem.solution()  #
+print('The code was made on colab, the link does not work.\
+Because the problem 67 is the exact same and serve as answer.')

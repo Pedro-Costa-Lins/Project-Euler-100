@@ -1,3 +1,4 @@
+
 import math
 from decorators import time_it
 
@@ -37,4 +38,4 @@ class Problem:
         return biggest
 
 
-Problem.solution()
+Problem.solution()  # Result: 906609

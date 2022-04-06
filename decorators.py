@@ -15,7 +15,7 @@ def time_it(func):
         time_taken = time.time() - before
             
         # Nice presentation.
-        print(f'Result: {val}\nTime:   {time_taken} seconds.')
+        print(f'  # Result: {val}\n  # Time:   {time_taken} seconds.')
         print(f'\nEnd of ({func.__name__}) function.')
                 
     return wrapper

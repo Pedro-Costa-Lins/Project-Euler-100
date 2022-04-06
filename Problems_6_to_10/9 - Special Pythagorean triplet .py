@@ -33,4 +33,4 @@ class Problem:
         return f'Not found matches for {number}.'
 
 
-Problem.solution()
+Problem.solution()  # Result: Numbers: 200 375 and 425. Sum: 1000. Product: 31875000.

@@ -1,3 +1,4 @@
+
 from decorators import time_it
 
 
@@ -6,7 +7,7 @@ class Problem:
     @time_it
     def solution(number=1000):
 
-        """Multiples of 3 and 5.
+        """ Multiples of 3 and 5.
         If we list all the natural numbers below 10 that are
         multiples of 3 or 5, we get 3, 5, 6 and 9.
 
@@ -25,4 +26,4 @@ class Problem:
         return final_sum
 
 
-Problem.solution()
+Problem.solution()  # Result: 233168

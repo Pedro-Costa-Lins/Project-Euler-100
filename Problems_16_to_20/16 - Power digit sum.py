@@ -1,10 +1,9 @@
 import numpy as np
-from decorators import log, time_it
+from decorators import time_it
 
 
 class Problem:
 
-    @log
     @time_it
     def solution(number=2**1000):
 
@@ -21,4 +20,4 @@ class Problem:
         return np.sum(sum_list)
 
 
-Problem.solution()
+Problem.solution()  # Result: 1366

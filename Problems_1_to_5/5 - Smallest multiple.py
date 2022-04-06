@@ -1,3 +1,4 @@
+
 from decorators import time_it
 
 
@@ -37,9 +38,10 @@ class Problem:
         while not_found:
             if is_multiple(n, numbers):
                 not_found = False
+                continue
             n += iteration
         
         return n
 
 
-Problem.solution()
+Problem.solution()  # Result: 232792560

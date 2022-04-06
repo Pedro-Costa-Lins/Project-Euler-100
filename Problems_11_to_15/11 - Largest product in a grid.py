@@ -86,4 +86,4 @@ class Problem:
         return biggest_product
 
 
-Problem.solution()
+Problem.solution()  # Result: 70600674

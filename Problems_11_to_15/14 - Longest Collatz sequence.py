@@ -54,4 +54,4 @@ class Problem:
         return longest_collatz, longest_collatz_starting_number
 
 
-Problem.solution()
+Problem.solution()  # Result: (526, 837799)

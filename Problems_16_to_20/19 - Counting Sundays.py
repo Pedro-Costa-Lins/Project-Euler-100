@@ -44,4 +44,4 @@ class Problem:
         return counter
 
 
-Problem.solution()
+Problem.solution()  # Result: 171

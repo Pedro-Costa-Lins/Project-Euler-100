@@ -25,4 +25,4 @@ class Problem:
         return sum_of_numbers
 
 
-Problem.solution()
+Problem.solution()  # Result: 648

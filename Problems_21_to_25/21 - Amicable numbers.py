@@ -47,4 +47,4 @@ class Problem:
         return sum(list_of_amicable_numbers)
 
 
-Problem.solution()
+Problem.solution()  # Result: 31626

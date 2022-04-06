@@ -1,7 +1,7 @@
 from decorators import time_it
 import numpy as np
 
-# Should have put it on another file, but "Me wants single file/problem".
+# Should have put it on another file, but I want single file/problem.
 NumberList = np.array([37107287533902102798797998220837590246510135740250,
                        46376937677490009712648124896970078050417018260538,
                        74324986199524741059474233309513058123726617309629,
@@ -113,7 +113,7 @@ class Problem:
         Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
         """
 
-        return np.sum(NumberList)
+        return str(np.sum(NumberList))[:10]  # WOW!
 
 
-Problem.solution()
+Problem.solution()  # Result: 5537376230

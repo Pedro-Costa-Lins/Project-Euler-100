@@ -1,4 +1,4 @@
-from decorators import log, time_it
+from decorators import time_it
 
 
 def last_digit_name(last_digit):
@@ -110,17 +110,15 @@ def number_name_giver(number):
 
 class Problem:
 
-    @log
     @time_it
     def solution(number=1000):
 
         """ Number letter counts
-        If the numbers 1 _ Problems_1_to_5 are written out in words: one, two, three, four, five,
+        If the numbers 1 to 5 are written out in words: one, two, three, four, five,
         then there are 3 + 3 + 5 + 4 + 4 = 19 letters used in total.
 
         If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words,
         how many letters would be used?
-
 
         NOTE: Do not count spaces or hyphens.
 
@@ -134,9 +132,9 @@ class Problem:
 
         final_list = []
         for i in range(1, number+1):
-            final_list = final_list + number_name_giver(i)
+            final_list += number_name_giver(i)
 
         return len(''.join(final_list))
 
 
-Problem.solution()
+Problem.solution()  # Result: 21124

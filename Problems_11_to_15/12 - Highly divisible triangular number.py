@@ -90,10 +90,9 @@ class Problem:
             number = number + 1
             divisors = n_of_divisors(prime_factors(triangle_value(number), primes))
             if divisors > biggest:
-                print(f'Biggest n of divisors now: {divisors}, from {number}')
                 biggest = divisors
 
-        return f'\nValue: {triangle_value(number)}, number of divisors: {divisors} and it is the {number}th number'
+        return f'Value: {triangle_value(number)}, number of divisors: {divisors} and it is the {number}th number'
 
 
-Problem.solution()
+Problem.solution()  # Result: Value: 76576500, number of divisors: 576 and it is the 12375th number

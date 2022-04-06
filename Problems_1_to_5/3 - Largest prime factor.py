@@ -1,3 +1,4 @@
+
 from decorators import time_it
 
 
@@ -30,4 +31,4 @@ class Problem:
                 return number / i
 
 
-Problem.solution()
+Problem.solution()  # Result: 6857.0

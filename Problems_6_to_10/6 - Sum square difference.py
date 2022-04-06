@@ -1,3 +1,4 @@
+
 from decorators import time_it
 
 
@@ -38,4 +39,4 @@ class Problem:
         return sqr_sum - sum_sqr
 
 
-Problem.solution()
+Problem.solution()  # Result: 25164150

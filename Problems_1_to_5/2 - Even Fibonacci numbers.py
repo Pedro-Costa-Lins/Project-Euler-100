@@ -1,3 +1,4 @@
+
 import numpy as np
 from decorators import time_it
 
@@ -41,4 +42,4 @@ class Problem:
         return total
 
 
-Problem.solution()
+Problem.solution()  # Result: 4613732
