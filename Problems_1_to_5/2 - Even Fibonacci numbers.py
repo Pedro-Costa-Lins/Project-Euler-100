@@ -30,7 +30,7 @@ class Problem:
             fibo = np.append(fibo, fibo[i] + fibo[i-1])
             
             # Now 'fibo[i]' is the new generated member of the list.
-            i = i + 1
+            i += 1
 
             # If 'i' is even, add 'Fibo[i]' to 'total'.
             if fibo[i] % 2 == 0: total += fibo[i]
