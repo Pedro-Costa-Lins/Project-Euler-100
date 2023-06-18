@@ -58,14 +58,10 @@ class Problem:
 
         # === == === Solution === == ===  #
 
-        # Lets create an iterator about n² + an + b, where |a| < 1000 and |b| <= 1000
-
-        # Quadratic formula def
-
         target = 1000
         return iterate_through_possibilities(target)
 
 
 Problem.solution()
-# Result 2: product_of_coefficients_with_max_n_of_primes (a * b) = -59231,
+# Result : product_of_coefficients_with_max_n_of_primes (a * b) = -59231,
 # most primes found (n) = 62, big a = -61, big b = 971

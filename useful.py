@@ -30,3 +30,6 @@ def is_prime_dumb_force_til_1000(number):
                     811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
                     947, 953, 967, 971, 977, 983, 991, 997] # list of primes 2 : 1000
 
+
+def clear_list_from_duplicates(list_with_duplicates):
+    return [*set(list_with_duplicates)]
