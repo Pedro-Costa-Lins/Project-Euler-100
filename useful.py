@@ -33,3 +33,6 @@ def is_prime_dumb_force_til_1000(number):
 
 def clear_list_from_duplicates(list_with_duplicates):
     return [*set(list_with_duplicates)]
+
+def is_palindrome(number):
+    return str(number) == str(number)[::-1]

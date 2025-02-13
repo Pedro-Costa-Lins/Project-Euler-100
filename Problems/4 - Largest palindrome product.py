@@ -1,11 +1,7 @@
 
 import math
 from decorators import time_it
-
-
-def is_palindrome(number):
-    return str(number) == str(number)[::-1]
-
+from useful import is_palindrome
 
 class Problem:
 
