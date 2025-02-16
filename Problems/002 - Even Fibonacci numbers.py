@@ -5,6 +5,7 @@ from decorators import time_it
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=4_000_000):
 

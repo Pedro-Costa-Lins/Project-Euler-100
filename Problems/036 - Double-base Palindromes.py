@@ -1,8 +1,10 @@
 from decorators import time_it
 from useful import is_palindrome
 
+
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
         """ The decimal number, 585 = 1001001001₂ (binary), is palindromic in both bases.

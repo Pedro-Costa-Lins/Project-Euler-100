@@ -1,7 +1,9 @@
 from decorators import time_it
 
+
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
         """Starting with the number 1 and moving to the right in a clockwise direction a 5 by 5 spiral

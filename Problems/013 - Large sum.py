@@ -106,6 +106,7 @@ NumberList = np.array([37107287533902102798797998220837590246510135740250,
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
 
@@ -113,7 +114,7 @@ class Problem:
         Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
         """
 
-        return str(np.sum(NumberList))[:10]  # WOW!
+        return str(np.sum(NumberList))[:10]
 
 
 Problem.solution()  # Result: 5537376230

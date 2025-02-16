@@ -20,6 +20,7 @@ def collatz_sequence(n):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(n=1_000_000):
 

@@ -1,5 +1,6 @@
 from decorators import time_it
 
+
 def check_abundant(number):
     list_of_divisors = []
     for i in range(1, number // 2 + 1):
@@ -11,36 +12,38 @@ def check_abundant(number):
         return False
 
 
-def list_abundants(target_limit):
-    list_of_abundants = []
+def list_abundances(target_limit):
+    list_of_abundances = []
     for i in range(1, target_limit):
         if check_abundant(i):
-            list_of_abundants.append(i)
-    print(f'size of list_of_abundants: {list_of_abundants.__sizeof__()}')
-    return list_of_abundants
+            list_of_abundances.append(i)
+    print(f'size of list_of_abundances: {list_of_abundances.__sizeof__()}')
+    return list_of_abundances
 
 
-def list_all_sums_of_bundants(list_of_abundants):
-    list_of_all_sums_of_bundants = []
-    for i in list_of_abundants:
-        for j in list_of_abundants:
-            list_of_all_sums_of_bundants.append(i+j)
+def list_all_sums_of_abundances(list_of_abundances):
+    list_of_all_sums_of_abundances = []
+    for i in list_of_abundances:
+        for j in list_of_abundances:
+            list_of_all_sums_of_abundances.append(i+j)
 
-    return [*set(list_of_all_sums_of_bundants)]
+    return [*set(list_of_all_sums_of_abundances)]
 
-def compare_lists(list_of_abundants, target_limit):
+
+def compare_lists(list_of_abundances, target_limit):
     list_of_all_the_positive_integers_which_cannot_be_written_as_the_sum_of_two_abundant_numbers = []
-    list_of_all_sums_of_bundants = list_all_sums_of_bundants(list_of_abundants)
+    list_of_all_sums_of_abundances = list_all_sums_of_abundances(list_of_abundances)
     for i in range(1, target_limit):
-        if i not in list_of_all_sums_of_bundants:
+        if i not in list_of_all_sums_of_abundances:
             list_of_all_the_positive_integers_which_cannot_be_written_as_the_sum_of_two_abundant_numbers.append(i)
     return list_of_all_the_positive_integers_which_cannot_be_written_as_the_sum_of_two_abundant_numbers
 
 
 class Problem:
 
+    @staticmethod
     @time_it
-    def solution(self):
+    def solution():
 
         """ A perfect number is a number for which the sum of its proper divisors is exactly equal to the number.
         For example, the sum of the proper divisors of 28 would be 1 + 2 + 4 + 7 + 14 = 28, which means that 28 is
@@ -60,8 +63,8 @@ class Problem:
         # === == === Solution === == ===  #
 
         target_limit = 28123
-        list_of_abundants = list_abundants(target_limit)
-        return sum(compare_lists(list_of_abundants, target_limit))
+        list_of_abundances = list_abundances(target_limit)
+        return sum(compare_lists(list_of_abundances, target_limit))
 
 
 Problem.solution()  # Result: 4179871

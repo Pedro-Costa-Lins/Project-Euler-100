@@ -3,8 +3,10 @@ import math
 from decorators import time_it
 from useful import is_palindrome
 
+
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=3):
 

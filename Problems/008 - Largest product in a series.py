@@ -20,6 +20,7 @@ Number = '7316717653133062491922511967442657474235534919493496983520312774\
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(adjacent=13, number=Number):
 

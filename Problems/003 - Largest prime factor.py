@@ -14,6 +14,7 @@ def is_prime(number):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=600851475143):
         

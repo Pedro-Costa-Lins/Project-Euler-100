@@ -55,6 +55,7 @@ def n_of_divisors(factor_list):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(primes=Prime_list, n=500):
 

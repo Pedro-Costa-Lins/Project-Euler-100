@@ -110,6 +110,7 @@ def number_name_giver(number):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=1000):
 

@@ -4,6 +4,7 @@ import urllib
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
 

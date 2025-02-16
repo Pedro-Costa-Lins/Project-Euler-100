@@ -3,6 +3,7 @@ from decorators import time_it
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(n=20):
 

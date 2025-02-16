@@ -21,6 +21,7 @@ def cycle_spotter(target_limit):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
 

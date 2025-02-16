@@ -32,6 +32,7 @@ def sorted_nicely(list_of_perms):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=1_000_000):
         """ A permutation is an ordered arrangement of objects. For example, 3124 is one possible permutation of the

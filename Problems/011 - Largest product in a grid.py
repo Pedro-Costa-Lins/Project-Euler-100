@@ -34,7 +34,7 @@ def arraynator(grid):
 class Problem:
 
     @time_it
-    def solution():
+    def solution(self):
 
         """
         What is the greatest product of four adjacent numbers in the same direction
@@ -43,47 +43,47 @@ class Problem:
         """
 
         array = arraynator(GridInText)
-        biggest_product = 0
+        big_product = 0
 
-        def horizontal(array, biggest_product):
+        def horizontal(local_array, biggest_product):
             for i in range(20):
-                for j in range(len(array[i]) - 3):
-                    test = int(array[i][j]) * int(array[i][j + 1]) * int(array[i][j + 2]) * int(array[i][j + 3])
+                for j in range(len(local_array[i]) - 3):
+                    test = int(local_array[i][j]) * int(local_array[i][j + 1]) * int(local_array[i][j + 2]) * int(local_array[i][j + 3])
 
                     if test > biggest_product:
                         biggest_product = test
             return biggest_product
 
-        def vertical(array, biggest_product):
+        def vertical(local_array, biggest_product):
             for i in range(17):
-                for j in range(len(array[i])):
-                    test = int(array[i][j]) * int(array[i + 1][j]) * int(array[i + 2][j]) * int(array[i + 3][j])
+                for j in range(len(local_array[i])):
+                    test = int(local_array[i][j]) * int(local_array[i + 1][j]) * int(local_array[i + 2][j]) * int(local_array[i + 3][j])
 
                     if test > biggest_product:
                         biggest_product = test
             return biggest_product
 
-        def diagonal(array, biggest_product):
+        def diagonal(local_array, biggest_product):
             for i in range(17):
-                for j in range(len(array[i]) - 3):
-                    test = int(array[i][j]) * int(array[i + 1][j + 1]) * int(array[i + 2][j + 2]) * int(array[i + 3][j + 3])
+                for j in range(len(local_array[i]) - 3):
+                    test = int(local_array[i][j]) * int(local_array[i + 1][j + 1]) * int(local_array[i + 2][j + 2]) * int(local_array[i + 3][j + 3])
 
                     if test > biggest_product:
                         biggest_product = test
 
             for i in range(17):
-                for j in range(3, len(array[i])):
-                    test = int(array[i][j]) * int(array[i + 1][j - 1]) * int(array[i + 2][j - 2]) * int(array[i + 3][j - 3])
+                for j in range(3, len(local_array[i])):
+                    test = int(local_array[i][j]) * int(local_array[i + 1][j - 1]) * int(local_array[i + 2][j - 2]) * int(local_array[i + 3][j - 3])
 
                     if test > biggest_product:
                         biggest_product = test
             return biggest_product
 
-        biggest_product = horizontal(array, biggest_product)
-        biggest_product = vertical(array, biggest_product)
-        biggest_product = diagonal(array, biggest_product)
+        big_product = horizontal(array, big_product)
+        big_product = vertical(array, big_product)
+        big_product = diagonal(array, big_product)
 
-        return biggest_product
+        return big_product
 
 
 Problem.solution()  # Result: 70600674

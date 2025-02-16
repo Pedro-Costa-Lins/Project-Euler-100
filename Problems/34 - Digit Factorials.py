@@ -5,6 +5,7 @@ from decorators import time_it
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
 
@@ -39,13 +40,7 @@ class Problem:
                 result += number
 
         return result
-        # Very very bad performance
+        # Very, very bad performance
+
 
 Problem.solution()  # Result: 40730
-
-
-
-
-
-
-

@@ -31,6 +31,7 @@ def iterate_through_possibilities(target):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
 

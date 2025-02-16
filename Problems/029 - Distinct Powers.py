@@ -4,6 +4,7 @@ from useful import clear_list_from_duplicates
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution():
         """ Consider all integer combinations of a^b for 2 <= a <= 5 and 2 <= b <= 5:

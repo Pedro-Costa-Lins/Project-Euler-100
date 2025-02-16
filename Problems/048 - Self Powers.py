@@ -3,6 +3,7 @@ from decorators import time_it
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=1000):
 
@@ -22,4 +23,4 @@ class Problem:
         return str(sum(bigArray))[-10:]
 
 
-Problem.solution()
+Problem.solution() # Result: 9110846700

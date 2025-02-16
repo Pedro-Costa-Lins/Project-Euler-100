@@ -12,6 +12,7 @@ def is_prime(number):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(number=2_000_000):
         """ Summation of primes

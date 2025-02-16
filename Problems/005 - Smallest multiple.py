@@ -12,6 +12,7 @@ def is_multiple(n, numbers):
 
 class Problem:
 
+    @staticmethod
     @time_it
     def solution(numbers=[11, 20]):
 
