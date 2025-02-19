@@ -24,17 +24,23 @@ class Problem:
 
         # === == === Solution === == ===  #
 
+        # I could not for my life find the solution for this problem, maybe I gave up
+        # too early, but here goes a solution by Beta Projects at:
+        # https://betaprojects.com/solutions/project-euler/project-euler-problem-031-solution/
 
-        result = 0
+        target = 200  # 200p
+        coins = (1, 2, 5, 10, 20, 50, 100, 200)
 
-        return result
+        # ways[1, 0, 0, 0, 0, 0, ... ]
+        ways = [1] + [0]*target
+
+        for coin in coins:
+            for i in range(coin, target + 1):
+                ways[i] += ways[i - coin]
+
+        return ways[target]
 
 
-Problem.solution()  # Result:
-
-
-
-
-
+Problem.solution()  # Result: 73682
 
 
